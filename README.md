@@ -93,7 +93,7 @@ MIT License — feel free to use and modify.
 - **Backend:** FastAPI  
 - **База данных:** PostgreSQL
 - **ORM:** SQLAlchemy
-- **Аутентификация:** JWT (python-jose) + Passlib 
+- **Аутентификация:** JWT (python-jose) + Passlib
 
 ---
 
