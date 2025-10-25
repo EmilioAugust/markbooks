@@ -8,4 +8,4 @@ app.include_router(bookmark_router)
 
 @app.get('/')
 async def main():
-    return {"message": "Welcome to Bookmark Manager"}
+    return {"message": "Welcome to Markbooks"}
