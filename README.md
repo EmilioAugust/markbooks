@@ -8,7 +8,7 @@
 </p>
 
 ---
-
+<a name="english-version"></a>
 ## 🇬🇧 English Version
 
 *(scroll down for 🇷🇺 Russian)*
@@ -66,6 +66,7 @@ MIT License — feel free to use and modify.
 
 ---
 
+<a name="russian-version"></a>
 ## 🇷🇺 Russian Version
 
 *(пролистай вверх для 🇬🇧 English)*
