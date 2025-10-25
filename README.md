@@ -1,11 +1,11 @@
-<div align="center">
+<p align="center">
 
 # 📚 Bookmark Manager  
 **FastAPI + SQLAlchemy + JWT Authentication**
 
 🌐 [English](#english-version) • 🇷🇺 [Русский](#russian-version)
 
-</div>
+</p>
 
 ---
 
