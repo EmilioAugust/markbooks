@@ -1,4 +1,3 @@
-```markdown
 <div align="center">
 
 # 📚 Bookmark Manager  
@@ -7,7 +6,6 @@
 🌐 [English](#english-version) • 🇷🇺 [Русский](#russian-version)
 
 </div>
-```
 
 ---
 
