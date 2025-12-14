@@ -58,7 +58,7 @@ uvicorn app.main:app --reload
 
 ```bash
 # Open API docs
-# http://127.0.0.1:8000/docs
+http://127.0.0.1:8000/docs
 ```
 
 ## 📄 License
@@ -117,7 +117,7 @@ uvicorn app.main:app --reload
 
 ```bash
 # Документация API:
-# http://127.0.0.1:8000/docs
+http://127.0.0.1:8000/docs
 ```
 
 ## 📄 Лицензия
