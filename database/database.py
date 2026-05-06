@@ -54,4 +54,11 @@ class Bookmark(Base):
 
 Base.metadata.create_all(engine)
 
-Session = sessionmaker(bind=engine)
+Session = sessionmaker(bind=engine, autoflush=False)
+
+def get_db():
+    db = Session()
+    try:
+        yield db
+    finally:
+        db.close()
