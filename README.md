@@ -43,7 +43,7 @@ Built with **FastAPI**, **SQLAlchemy**, and **JWT authentication**, it allows us
 ```bash
 # Clone the repository
 git clone https://github.com/EmilioAugust/markbooks.git
-cd bookmark-manager
+cd markbooks
 ```
 
 ```bash
@@ -53,7 +53,7 @@ pip install -r requirements.txt
 
 ```bash
 # Run the server
-uvicorn app.main:app --reload
+uvicorn main:app --reload
 ```
 
 ```bash
