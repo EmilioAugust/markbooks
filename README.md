@@ -42,7 +42,7 @@ Built with **FastAPI**, **SQLAlchemy**, and **JWT authentication**, it allows us
 
 ```bash
 # Clone the repository
-git clone https://github.com/yourusername/bookmark-manager.git
+git clone https://github.com/EmilioAugust/markbooks.git
 cd bookmark-manager
 ```
 
@@ -58,7 +58,7 @@ uvicorn app.main:app --reload
 
 ```bash
 # Open API docs
-# http://127.0.0.1:8000/docs
+http://127.0.0.1:8000/docs
 ```
 
 ## 📄 License
@@ -101,7 +101,7 @@ MIT License — feel free to use and modify.
 
 ```bash
 # Клонирование репозитория
-git clone https://github.com/yourusername/bookmark-manager.git
+git clone https://github.com/EmilioAugust/markbooks.git
 cd bookmark-manager
 ```
 
@@ -117,7 +117,7 @@ uvicorn app.main:app --reload
 
 ```bash
 # Документация API:
-# http://127.0.0.1:8000/docs
+http://127.0.0.1:8000/docs
 ```
 
 ## 📄 Лицензия
