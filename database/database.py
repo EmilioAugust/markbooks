@@ -1,7 +1,7 @@
 import re
 from sqlalchemy import create_engine, func
 from sqlalchemy.orm import sessionmaker, declarative_base, relationship
-from sqlalchemy import Column, ForeignKey, Integer, String, DateTime
+from sqlalchemy import Column, ForeignKey, Integer, String, DateTime, Boolean
 from environs import Env
 
 env = Env()
@@ -41,14 +41,17 @@ class Bookmark(Base):
     title = Column(String, nullable=True)
     description = Column(String)
     tags = Column(String)
+    favorite = Column(Boolean, nullable=False)
     created_at = Column(DateTime, server_default=func.now(), onupdate=func.now())
 
-    def __init__(self, user_id, url, title, description, tags):
+    def __init__(self, user_id, url, title, description, tags, favorite):
         self.user_id = user_id
         self.url = url
         self.title = title
         self.description = description
         self.tags = tags
+        self.favorite = favorite
+
 
     users = relationship('Users', back_populates='bookmarks')
 
