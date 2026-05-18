@@ -27,6 +27,7 @@ class BookmarkOut(BaseModel):
     description: Optional[str | None] = None
     tags: Optional[str | None] = None
     favorite: bool = False
+    icon_url: str
 
     class Config:
         orm_mode = True
