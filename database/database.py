@@ -42,15 +42,17 @@ class Bookmark(Base):
     description = Column(String)
     tags = Column(String)
     favorite = Column(Boolean, nullable=False)
+    icon_url = Column(String, nullable=True)
     created_at = Column(DateTime, server_default=func.now(), onupdate=func.now())
 
-    def __init__(self, user_id, url, title, description, tags, favorite):
+    def __init__(self, user_id, url, title, description, tags, favorite, icon_url):
         self.user_id = user_id
         self.url = url
         self.title = title
         self.description = description
         self.tags = tags
         self.favorite = favorite
+        self.icon_url = icon_url
 
 
     users = relationship('Users', back_populates='bookmarks')
