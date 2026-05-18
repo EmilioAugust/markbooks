@@ -1,8 +1,8 @@
 from fastapi import HTTPException
 from models.models import CreateBookmark, UpdateBookmark, BookmarkOut
 from database.database import Bookmark
+from utils.utils import get_icon_url
 from sqlalchemy.orm import Session
-from parser.parser import get_title_website
 from sqlalchemy.exc import IntegrityError
 
 async def show_bookmarks(current_user: int, db: Session):
@@ -30,11 +30,11 @@ async def show_one_bookmark_by_query(query: str, current_user: int, db: Session)
     
 async def creating_bookmark(bookmark: CreateBookmark, current_user: int, db: Session):
     existing_bookmark = db.query(Bookmark).filter(Bookmark.url == bookmark.url, Bookmark.user_id == current_user).first()
+    icon_url = await get_icon_url(bookmark.url)
     if existing_bookmark:
         raise HTTPException(status_code=400, detail="Bookmark with this URL already exists.")
-    new_bookmark = Bookmark(user_id=current_user, url=bookmark.url, title=bookmark.title, description=bookmark.description, tags=bookmark.tags, favorite=bookmark.favorite)
-    if new_bookmark.title == "":
-        new_bookmark.title = await get_title_website(new_bookmark.url)
+    new_bookmark = Bookmark(user_id=current_user, url=bookmark.url, title=bookmark.title,
+                            description=bookmark.description, tags=bookmark.tags, favorite=bookmark.favorite, icon_url=icon_url)
     db.add(new_bookmark)
     try:
         db.commit()
